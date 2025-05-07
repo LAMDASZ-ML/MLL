@@ -61,13 +61,13 @@ We have listed all needed datasets in the json file `./MLL/dataset.json`. You ca
 $ python ./MLL/evaluation_dataset_construct.py
 ```
 ## 🔥 Usage
-### Build Model Labels
+### Build model labels
 
 ```bash
 $ python ./MLL/label.py
 ```
 
-### Select Models
+### Select models
 
 ```bash
 $ python selection.py
