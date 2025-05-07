@@ -3,10 +3,10 @@
 
 ## 🖥️ Introduction
 Vision-Language Models (VLMs) are becoming increasingly popular across various visual tasks, and several open-sourced VLM variants have been released. However, selecting the best-performing  VLM for a specific downstream task is challenging since no single VLM can achieve promising performance on all downstream tasks, and evaluating all available VLMs is impossible due to time and data limitations. To address this problem, we proposes a novel paradigm to select and reuse VLM for downstream adaptation, called **M**odel **L**abel **L**earning **(MLL)**.
-
-**MLL** contains three key modules: model labeling, which assigns labels to each
-VLM to describe their specialty and utility; model selection, which matches the requirements of the target task with model labels; and model reuse, which applies selected VLMs to the target task
-in an ensemble manner. The proposal is highly computationally efficient and growable. We also introduce a new benchmark for evaluating VLM selection methods, including 49 VLMs and 17 target task datasets.
+### MLL Paradigm
+![MLL Paradigm](img/framework.jpg)
+**MLL** contains three key modules: *model labeling*, which assigns labels to each
+VLM to describe their specialty and utility; *model selection*, which matches the requirements of the target task with model labels; and *model reuse*, which applies selected VLMs to the target task in an ensemble manner. The proposal is highly computationally efficient and growable. We also introduce a new benchmark for evaluating VLM selection methods, including 49 VLMs and 17 target task datasets.
 
 ## 📢 News
 - [2025-05] Our paper has been accepted by ICML 2025!
