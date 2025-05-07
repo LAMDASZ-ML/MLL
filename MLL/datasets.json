@@ -1,0 +1,117 @@
+{
+    "target_dataset":{
+        "CIFAR100":{
+            "root":"./datasets/cifar-100",
+            "domain": "natrual photograph",
+            "task": "image classification"
+        },
+        "Country211":{
+            "root":"./datasets/Country211",
+            "domain": "natrual photograph",
+            "task": "geolocalization"
+        },
+        "DTD":{
+            "root":"./datasets",
+            "domain": "texture photograph/picture",
+            "task": "image classification"
+        },
+        "Food101":{
+            "root":"./datasets",
+            "domain": "food photograph",
+            "task": "image classification"
+        },
+        "MNIST":{
+            "root":"./datasets/mnist",
+            "domain": "digit picture",
+            "task": "image classification"
+        },
+        "OxfordIIITPet":{
+            "root":"./datasets/oxford_pets",
+            "domain": "pet picture",
+            "task": "image classification"
+        },
+        "RenderedSST2":{
+            "root":"./datasets/SST2",
+            "domain": "text picture",
+            "task": "optical character recognition"
+        },
+        "StanfordCars":{
+            "root":"./datasets",
+            "domain": "car photograph",
+            "task": "image classification"
+        },
+        "STL10":{
+            "root":"./datasets/STL10",
+            "domain": "natural photograph",
+            "task": "image classification"
+        },
+        "UCF101":{
+            "root":"./datasets/ucf101/UCF-101-midframes",
+            "domain": "video frame",
+            "task": "action recognition"
+        },
+        "PCAM":{
+            "root":"./datasets",
+            "domain": "medical picture/histopathologic scans",
+            "task": "medical image classification"
+        },
+        "Flowers102":{
+            "root":"./datasets/oxford_flower/test",
+            "domain": "flower picture",
+            "task": "image classification"
+        },
+        "FER2013":{
+            "root":"./datasets/fer2013/test",
+            "domain": "facial picture",
+            "task": "facial expression classification"
+        },
+        "resisc45":{
+            "root":"./datasets/RESISC45/NWPU-RESISC45",
+            "domain": "satellite/aerial pictures",
+            "task": "land cover classification"
+        },
+        "GTSRB":{
+            "root":"./datasets/gtsrb/test",
+            "domain": "traffic picture",
+            "task": "image classification"
+        },
+
+        "clevr_closest_object_distance":{
+            "root":"./datasets/clevr_closest_object_distance/test",
+            "domain": "photograph/picture",
+            "task": "object distance estimation"
+        },
+        "dmlab":{
+            "root":"./datasets/dmlab/test",
+            "domain": "photograph/picture",
+            "task": "object distance estimation"
+        }
+    },
+    "sample_dataset":{
+        "imagenet_r":{
+            "root":"./datasets/imagenet-r/origin",
+            "domain": "photograph/picture",
+            "task": "image classification"
+        },
+        "ImageNet":{
+            "root":"./datasets/imagenet/ImageNet2012",
+            "domain": "photograph/picture",
+            "task": "image classification"
+        },
+        "imagenet_a":{
+            "root":"./datasets/imagenet-a/img",
+            "domain": "photograph/picture",
+            "task": "image classification"
+        },
+        "imagenet-sketch":{
+            "root":"./datasets/imagenet-sketch/sketch",
+            "domain": "sketch/drawing",
+            "task": "image classification"
+        },
+        "imagenet_v2":{
+            "root":"./datasets/imagenetv2/imagenetv2-matched-frequency-format-val",
+            "domain": "photograph/picture",
+            "task": "image classification"
+        }
+    }
+}

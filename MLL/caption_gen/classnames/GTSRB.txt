@@ -1,0 +1,43 @@
+100kph Speed limit
+120kph Speed limit
+20kph Speed limit
+30kph Speed limit
+50kph Speed limit
+60kph Speed limit
+70kph Speed limit
+80kph Speed limit
+Ahead only
+Beware of ice or snow
+Bicycles crossing
+Bumpy road
+Children crossing
+Dangerous curve to the left
+Dangerous curve to the right
+Double curve
+End of 80kph speed limit
+End of all speed and passing limits
+End of no passing
+End of no passing by vehicles over 3.5 tons
+General caution
+Go straight or left
+Go straight or right
+Keep left
+Keep right
+No entry
+No passing
+No passing for vehicles over 3.5 tons
+No vehicles
+Pedestrians
+Priority road
+Right-of-way at the next intersection
+Road narrows on the right side
+Road work
+Roundabout mandatory
+Slippery road
+Stop
+Traffic signals
+Turn left ahead
+Turn right ahead
+Vechiles over 3.5 tons prohibited
+Wild animals crossing
+Yield
