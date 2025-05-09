@@ -1,5 +1,5 @@
 # [ICML'25] Vision-Language Model Selection and Reuse for Downstream Adaptation
-[[`Paper`](https://arxiv.org/abs/2501.18271)] [[`Code`](https://github.com/LAMDASZ-ML/MLL)]
+[[`Paper`](https://arxiv.org/abs/2501.18271)] [[`Code`](https://github.com/LAMDASZ-ML/MLL)] [[`Project Page`](https://howardtz.github.io/MLL-idx)]
 
 ## 🖥️ Introduction
 Vision-Language Models (VLMs) are becoming increasingly popular across various visual tasks, and several open-sourced VLM variants have been released. However, selecting the best-performing  VLM for a specific downstream task is challenging since no single VLM can achieve promising performance on all downstream tasks, and evaluating all available VLMs is impossible due to time and data limitations. To address this problem, we proposes a novel paradigm to select and reuse VLM for downstream adaptation, called **M**odel **L**abel **L**earning **(MLL)**.
