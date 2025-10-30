@@ -10,6 +10,9 @@ import pandas as pd
 from my_utils import MetricLogger
 from my_datasets import build_dataset
 from timm.utils import accuracy
+from openai import OpenAI
+from gen_captions import openai_request
+from my_utils import get_embedding
 
 root_path = './'
 with open(f'{root_path}/pretrained.json','r') as f:
@@ -23,7 +26,37 @@ device = 'cuda:0'
 true_all = []
 true_positive_all = []
 false_positive_all = []
-for model_name, pretrained in pre_list[:int(len(pre_list)/3)]:
+
+dataset_name = 'evaluation_dataset'
+dataset = build_dataset(dataset_name,f'{root_path}/evaluation_dataset',is_train=False)
+if hasattr(dataset,'classes'):
+    node_names = dataset.classes
+elif hasattr(dataset,'categories'):
+    node_names = dataset.categories
+classnames = [[] for _ in range(len(node_names))]
+client = OpenAI()
+caption_length = 50
+caption_dir = f'./caption_gen/captions'
+captions = {}
+text_prompt = lambda classname, length: f"Generate long detailed description for {classname} .\
+        e.g., '{classname} is ... '. Generate 10 long descriptions each with {length} words"
+for classname in tqdm(classnames, desc=dataset_name+', Class', leave=False):
+    try:
+        response = openai_request(client,text_prompt(classname, 50))
+        captions[classname] = response
+    except Exception as e:
+        print(f"Failed for {classname} in {dataset_name} with error: {e}")
+os.makedirs(caption_dir,exist_ok=True)
+with open(f"{caption_dir}/{dataset_name}.json", "w") as f:
+    json.dump(captions, f)
+evaluation_embeddings = []
+for i, (classname, caption) in enumerate(captions.items()):
+    caption_embedding = get_embedding(caption)
+    evaluation_embeddings.append(caption_embedding)
+with open(f'./caption_gen/embedding/evaluation_embedding.pkl','wb') as f:
+    pickle.dump(evaluation_embeddings, f)
+
+for model_name, pretrained in pre_list:
     if os.path.exists(f'{label_path}/{model_name}_{pretrained}.pkl'):
         print(f'{model_name}_{pretrained} already exists')
         continue
